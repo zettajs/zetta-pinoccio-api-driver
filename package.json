@@ -1,0 +1,15 @@
+{
+  "name": "zetta-pinoccio-api-driver",
+  "version": "0.1.0",
+  "description": "Zetta pinoccio driver using pinoccio http api.",
+  "main": "scout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adam Magaluk <AdamMagaluk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "zetta-device": "^0.9.0",
+    "zetta-scout": "^0.5.0"
+  }
+}
