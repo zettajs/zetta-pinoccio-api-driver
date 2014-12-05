@@ -71,15 +71,14 @@ Pinoccio.prototype.sync = function() {
       self.batteryVoltage = event.value.voltage;
       self.batteryPercent = event.value.battery;
       self.batteryCharging = event.value.charging;
-    }
-
-    if (event.type === 'led') {
+    } else if (event.type === 'led') {
       self.led = event.value.led;
-    }
-
-    if (event.type === 'temp') {
+    } else if (event.type === 'temp') {
       self.tempC = event.value.c;
+    } else if (event.type === 'available') {
+      self.state = (event.value.available) ? 'online' : 'offline';
     }
+    
   });
 
   this._client.post('/v1/' + this.troop + '/' + this.deviceId + '/command', { command: 'scout.report'} ,function(err, json) {
